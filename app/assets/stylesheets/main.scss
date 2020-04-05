@@ -1,19 +1,19 @@
 /* BigBlueButton open source conferencing system - http://www.bigbluebutton.org/.
-*
-* Copyright (c) 2018 BigBlueButton Inc. and by respective authors (see below).
-*
-* This program is free software; you can redistribute it and/or modify it under the
-* terms of the GNU Lesser General Public License as published by the Free Software
-* Foundation; either version 3.0 of the License, or (at your option) any later
-* version.
-*
-* BigBlueButton is distributed in the hope that it will be useful, but WITHOUT ANY
-* WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
-* PARTICULAR PURPOSE. See the GNU Lesser General Public License for more details.
-*
-* You should have received a copy of the GNU Lesser General Public License along
-* with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
-*/
+ *
+ * Copyright (c) 2018 BigBlueButton Inc. and by respective authors (see below).
+ *
+ * This program is free software; you can redistribute it and/or modify it under the
+ * terms of the GNU Lesser General Public License as published by the Free Software
+ * Foundation; either version 3.0 of the License, or (at your option) any later
+ * version.
+ *
+ * BigBlueButton is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+ * PARTICULAR PURPOSE. See the GNU Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public License along
+ * with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
+ */
 
 // Place all the styles related to the Main controller here.
 // They will automatically be included in application.css.
@@ -157,4 +157,93 @@
 
 .signin-button {
   font-size: 16px;
+}
+:root {
+  --primary-bg_color: rgba(225, 229, 123);
+  --primary-color: rgba(69, 67, 132);
+  --accent-color: rgba(26, 161, 230, 0.7);
+  --accent-color_secondary: cornsilk;
+  --primary-bg: url('assets/css-magic-background.png');
+
+  --mono: 'Fira Code VF';
+  --sans: 'CooperHewittLight';
+  --serif: 'charter';
+  --primary-font: var(--mono);
+  --primary-font_size: 24px;
+  --heading-font: var(--sans);
+
+  --section-spacing: 1.3rem;
+  --inner-spacing: calc(var(--section-spacing) / 2);
+}
+html , body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+html {
+  font-size: var(--primary-font_size);
+}
+
+body {
+  background: var(--primary-bg_color);
+  color: var(--primary-color);
+  font-family: var(--primary-font);
+  min-height: 100%;
+}
+h1, h2, h3, h4 {
+  font-family: var(--heading-font);
+  margin: 0;
+  padding: 0;
+}
+header ,main {
+  max-width: 1000px;
+  margin: var(--section-spacing) auto var(--section-spacing) auto;
+
+  text-align: center;
+}
+
+header p {
+  margin-top: 0;
+  font-style: italic;
+}
+
+.accent {background: var(--accent-color);}
+
+article {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  max-width: calc(1000px /2);
+  margin: var(--section-spacing) auto var(--section-spacing) auto;
+  border: 7px outset var(--accent-color);
+}
+
+article p.description , a {
+  margin: auto;
+  padding: var(--inner-spacing);
+}
+
+article figure {
+  order: -1;
+  width: 100%;
+  margin-top: 0;
+}
+article:nth-of-type(1n) figure {
+  background: var(--accent-color);
+  filter: hue-rotate(36deg);
+}
+article:nth-of-type(2n) figure {
+  background: var(--accent-color);
+  filter: hue-rotate(108deg);
+}
+article:nth-of-type(3n) figure {
+  background: var(--accent-color);
+  filter: hue-rotate(72deg);
+}
+
+article figure img {
+  max-width: 100%;
+  margin: auto;
 }

@@ -12,18 +12,41 @@
 # You should have received a copy of the GNU Lesser General Public License along
 # with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 %>
-
-<div class="background">
-  <div class="container pt-9 pb-8">
-    <div class="row">
-      <div class="col-md-12 col-sm-12 text-center">
-        <h1 id="main-text" class="display-4 mb-4"> <%= t("landing.welcome").html_safe %></h1>
-        <p class="lead offset-lg-2 col-lg-8 col-sm-12 "><%= t("landing.about").html_safe %></p>
-        <%= link_to "https://youtu.be/Hso8yLzkqj8", target: "_blank" do %>
-          <h4><%= t("landing.video") %> <i class="far fa-play-circle ml-1"></i></h4>
-        <% end %>
-      </div>
-
-    </div>
-  </div>
-</div>
+<header>
+    <h1>Welcome to tv.solarpunk.cool!</h1>
+    <p>Online Classes for Radical Bodies and Minds</p>
+</header>
+<main>
+    <h2>Schedule</h2>
+    <em>All classes are koha</em>
+    <article>
+        <h3>Kundalini Yoga</h3>
+        <p>Tuesdays at <time datetime="18:00T+12:00">6pm, NZT</time></p>
+        <a href="https://tv.solarpunk.cool/b/zac-p4c-47d">Enter the Class</a>
+        <figure>
+            <img src='https://solarpunk.cool/aesthetic/assets/intelligence-meditation-small.gif'>
+        </figure>
+    </article>
+    <article>
+        <h3>Cyborg Physical Therapy</h3>
+        <p>Thursdays at <time datetime="12:00T+12:00">Noon, NZT</time></p>
+        <p class='description'></p>
+        <figure>
+            <img src='https://solarpunk.cool/aesthetic/assets/kirtanhands.png'>
+        </figure>
+        <a href="https://tv.solarpunk.cool/b/zac-p4c-47d">Enter the Class</a>
+    </article>
+    <article>
+        <h3>Solarpunk Magic Computer Club</h3>
+        <p>Sundays at <time datetime="11:00T+12:00">11:00 to 13:00, NZT</time></p>
+        <p class='description'>A weekly club for non techie folk to hang out and code.</p>
+        <figure>
+            <img src='https://solarpunk.cool/aesthetic/assets/star_computations.gif' alt='old computer, keyboard, and mouse, with stars flashing on screen'>
+        </figure>
+        <a href="https://tv.solarpunk.cool/b/zac-fuv-znx">Enter the Class</a>
+    </article>
+</main>
+<footer>
+    <p><em>Are you a class teacher? <a href='b/signin'>sign in</a></em></p>
+    <p><em>Do you wanna be a teacher? <a href='b/signup'>sign up</a></em></p>
+</footer>
